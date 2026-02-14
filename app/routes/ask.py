@@ -10,6 +10,13 @@ class QuestionRequest(BaseModel):
 
 @router.post("/ask")
 async def ask_question(request: QuestionRequest):
+    print(f"❓ Question received: {request.question}")
     context = retrieve_context(request.question)
+    
+    if not context or not context.strip():
+        print("⚠️ No context found, returning default message")
+        return {"answer": "Not found in documents.", "context_found": False}
+    
+    print(f"✅ Generating answer with {len(context)} chars of context")
     answer = generate_answer(request.question, context)
-    return {"answer": answer}
+    return {"answer": answer, "context_found": True}

@@ -17,6 +17,11 @@ ENV/
 # ChromaDB
 chroma_db/
 
+# Uploaded documents
+docs/*.pdf
+docs/*.txt
+docs/*.docx
+
 # Temporary files
 temp_*
 

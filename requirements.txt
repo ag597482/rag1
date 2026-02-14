@@ -5,3 +5,6 @@ chromadb
 pypdf
 python-dotenv
 python-multipart
+pdf2image
+pytesseract
+pillow

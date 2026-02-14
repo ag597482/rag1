@@ -22,5 +22,8 @@ class Settings:
     
     # Database Configuration
     CHROMA_DIR = "./chroma_db"
+    
+    # Upload Configuration
+    DOCS_DIR = "./docs"
 
 settings = Settings()
