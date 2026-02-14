@@ -8,7 +8,7 @@ def generate_answer(question: str, context: str):
     prompt = f"""
     You are a helpful assistant.
     Answer ONLY using the provided context.
-    If answer is not found, say "Not found in documents."
+    If the answer cannot be determined from the context, say "I couldn't find that specific information in the documents."
 
     Context:
     {context}

@@ -1,11 +1,10 @@
 import chromadb
-from chromadb.config import Settings as ChromaSettings
 from app.core.config import settings
 
 class VectorStore:
     def __init__(self):
-        self.client = chromadb.Client(
-            ChromaSettings(persist_directory=settings.CHROMA_DIR)
+        self.client = chromadb.PersistentClient(
+            path=settings.CHROMA_DIR
         )
         self.collection = self.client.get_or_create_collection("documents")
 

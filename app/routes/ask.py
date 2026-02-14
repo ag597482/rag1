@@ -15,8 +15,15 @@ async def ask_question(request: QuestionRequest):
     
     if not context or not context.strip():
         print("⚠️ No context found, returning default message")
-        return {"answer": "Not found in documents.", "context_found": False}
+        return {
+            "answer": "No relevant documents found in the database. Please upload documents first.",
+            "context_found": False
+        }
     
     print(f"✅ Generating answer with {len(context)} chars of context")
     answer = generate_answer(request.question, context)
-    return {"answer": answer, "context_found": True}
+    return {
+        "answer": answer,
+        "context_found": True,
+        "sources_used": True
+    }
