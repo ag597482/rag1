@@ -1,0 +1,32 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+myenv/
+venv/
+env/
+ENV/
+
+# ChromaDB
+chroma_db/
+
+# Temporary files
+temp_*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.env
+
+# OS
+.DS_Store
+Thumbs.db
