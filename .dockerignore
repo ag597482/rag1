@@ -1,0 +1,32 @@
+# Virtual environments
+myenv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables (will be set in Railway)
+.env
+
+# Local data (will be created fresh in container)
+chroma_db/
+docs/*.pdf
+pdf_metadata.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
