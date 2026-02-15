@@ -9,7 +9,7 @@ class Settings:
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     
     # Model Configuration
-    MODEL_NAME = "gpt-4o-mini"
+    MODEL_NAME = "gpt-5.2"
     EMBEDDING_MODEL = "text-embedding-3-small"
     
     # Chunking Configuration
