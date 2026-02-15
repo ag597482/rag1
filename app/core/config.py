@@ -9,7 +9,7 @@ class Settings:
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     
     # Model Configuration
-    MODEL_NAME = "gpt-4.1"
+    MODEL_NAME = "gpt-5.2"
     EMBEDDING_MODEL = "text-embedding-3-small"
     
     # Chunking Configuration
@@ -20,13 +20,17 @@ class Settings:
     TOP_K = 3
     TEMPERATURE = 0.2
     
+    # Data directory — on Railway, set DATA_DIR=/data via env var
+    # Locally it defaults to current directory
+    DATA_DIR = os.getenv("DATA_DIR", ".")
+
     # Database Configuration
-    CHROMA_DIR = "./chroma_db"
+    CHROMA_DIR = os.path.join(DATA_DIR, "chroma_db")
     
     # Upload Configuration
-    DOCS_DIR = "./docs"
+    DOCS_DIR = os.path.join(DATA_DIR, "docs")
     
     # Metadata Configuration
-    METADATA_FILE = "./pdf_metadata.json"
+    METADATA_FILE = os.path.join(DATA_DIR, "pdf_metadata.json")
 
 settings = Settings()

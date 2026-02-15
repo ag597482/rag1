@@ -15,8 +15,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application
 COPY . .
 
-# Create directories for data persistence
-RUN mkdir -p /app/docs /app/chroma_db
+# Create the persistent data directory
+RUN mkdir -p /data/docs /data/chroma_db
 
 # Expose the port (Railway sets PORT env var)
 EXPOSE 8000
