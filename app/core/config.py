@@ -9,7 +9,7 @@ class Settings:
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     
     # Model Configuration
-    MODEL_NAME = "gpt-5.2"
+    MODEL_NAME = "gpt-4.1"
     EMBEDDING_MODEL = "text-embedding-3-small"
     
     # Chunking Configuration
@@ -25,5 +25,8 @@ class Settings:
     
     # Upload Configuration
     DOCS_DIR = "./docs"
+    
+    # Metadata Configuration
+    METADATA_FILE = "./pdf_metadata.json"
 
 settings = Settings()
